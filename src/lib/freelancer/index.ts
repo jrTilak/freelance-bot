@@ -77,8 +77,7 @@ class Freelancer {
         budget: {
           maximum: project.budget.maximum,
           minimum: project.budget.minimum,
-          durationType:
-            project.budget.project_type === "fixed" ? "fixed" : "periodic",
+          durationType: project.hourly_project_info ? "periodic" : "fixed",
         },
         currency: project.currency.code,
         periodicInfo: project.hourly_project_info?.commitment
